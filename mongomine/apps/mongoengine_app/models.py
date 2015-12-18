@@ -1,4 +1,7 @@
 from mongoengine import *
+from django.conf import settings
+
+connect(settings.MONGO_DATABASE_NAME, host=settings.MONGO_HOST, port=settings.MONGO_PORT)
 
 class Candidate(DynamicDocument):
     """

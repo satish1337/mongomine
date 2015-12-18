@@ -123,3 +123,9 @@ class Settings(LoggerSettingsMixin, Configuration):
 	    'NAME': os.path.join(DJANGO_ROOT, 'db.sqlite3'),
 	}
     }
+
+    MONGO_DATABASE_NAME = "test_database"
+
+    MONGO_HOST = "localhost"
+
+    MONGO_PORT = 27017

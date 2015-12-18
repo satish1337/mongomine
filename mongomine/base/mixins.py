@@ -19,7 +19,7 @@ class AnonymousAPIMixin(object):
         Set authenticators (or authentication_classes) to
         AnonymousAuthentication if action is one of anonymous_allowed_actions
         """
-        from apps.apis.common import authentication as common_authentication
+        from . import authentication as common_authentication
 
         result = super(AnonymousAPIMixin, self).initialize_request(request, *args, **kargs)
         if self.action in self.anonymous_allowed_actions:
